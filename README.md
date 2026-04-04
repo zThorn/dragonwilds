@@ -27,7 +27,8 @@ This will build the image and then run it, you shouldn't need to do this except 
 ```
 docker build -t rsdw-dedicated:local . && \
 docker run -d \
-  --name=DragonWilds \
+  --name=Dragonwilds \
+  --restart unless-stopped \
   -e UID=99 \
   -e GID=100 \
   -e UMASK=000 \
@@ -41,8 +42,8 @@ docker run -d \
 ```
 
 ## Restart - To restart via command line
-docker stop DragonWilds && \
-docker start -ai DragonWilds
+docker stop Dragonwilds && \
+docker start -ai Dragonwilds
 
 ## Backup User Script
 This script is under the pre-requisite that you have the user script plugin installed. You can update where the backups are saved by editing the `mv $backup_tar /mnt/user/backup/dragonwilds_backups` line.
@@ -55,10 +56,10 @@ If you need to restore from a backup you can run the following command `tar -xzv
 
 ```
 #!/bin/bash
-# Stop DragonWilds
-echo "Stopping DragonWilds"
-docker stop DragonWilds
-echo "DragonWilds stopped"
+# Stop Dragonwilds
+echo "Stopping Dragonwilds"
+docker stop Dragonwilds
+echo "Dragonwilds stopped"
 
 cd /mnt/user/appdata/rsdw-dedicated/RSDragonwilds
 
@@ -69,10 +70,10 @@ echo "Compress Saved folder"
 tar -czvf $backup_tar Saved
 echo "Saved folder compressed"
 
-# Start DragonWilds
-echo "Starting DragonWilds"
-docker start DragonWilds
-echo "DragonWilds started"
+# Start Dragonwilds
+echo "Starting Dragonwilds"
+docker start Dragonwilds
+echo "Dragonwilds started"
 
 # Create backup dir if it does not exist
 mkdir -p /mnt/user/backup/dragonwilds_backups
