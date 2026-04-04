@@ -41,10 +41,6 @@ docker run -d \
   rsdw-dedicated:local
 ```
 
-## Restart - To restart via command line
-docker stop Dragonwilds && \
-docker start -ai Dragonwilds
-
 ## Backup User Script
 This script is under the pre-requisite that you have the user script plugin installed. You can update where the backups are saved by editing the `mv $backup_tar /mnt/user/backup/dragonwilds_backups` line.
 
