@@ -17,7 +17,7 @@ If there is an update you should just have to restart the server and the new ded
 5. Modify `/mnt/{cache|user}/appdata/rsdw-dedicated/Saved/Config/LinuxServer/DedicatedServer.ini` - You can read what to put in the ini values from their docs https://dragonwilds.runescape.com/news/how-to-dedicated-servers
 6. Start the server back up
 7. Search for your server in the game (case sensitive)
-7.1 If you are connecting from the same network there is a little checkbox at the bottom left of the game then when you connect you enter in the ip address of your server
+    - If you are connecting from the same network there is a little checkbox at the bottom left of the game then when you connect you enter in the ip address of your server
 8. After you get the server running I suggest setting up the Backup User Script
 
 ## First Time Run
