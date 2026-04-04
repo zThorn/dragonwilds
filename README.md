@@ -14,7 +14,7 @@ If there is an update you should just have to restart the server and the new ded
 2. Run the `First Time Run` command below
 3. Open the logs and wait for steamcmd, and the game to download and run so it creates the initial files you need
 4. Stop the server
-5. Modify the Saved/Config/LinuxServer/DedicatedServer.ini - You can read what to put in the ini values from their docs https://dragonwilds.runescape.com/news/how-to-dedicated-servers
+5. Modify `/mnt/cache/appdata/rsdw-dedicated/Saved/Config/LinuxServer/DedicatedServer.ini` - You can read what to put in the ini values from their docs https://dragonwilds.runescape.com/news/how-to-dedicated-servers
 6. Start the server back up
 7. Search for your server in the game (case sensitive)
 7.1 If you are connecting from the same network there is a little checkbox at the bottom left of the game then when you connect you enter in the ip address of your server
