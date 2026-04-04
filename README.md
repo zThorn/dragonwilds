@@ -21,10 +21,10 @@ This will build the image and then run it, you shouldn't need to do this except 
 > **⚠️ WARNING:** I have my volumes mounted directly to cache since my appdata folder is only on my cache pool. If yours is not you need to change cache to user.
 - These 2 lines:
 ```
-  -v /mnt/user/appdata/steamcmd:/serverdata/steamcmd:rw \
-  -v /mnt/user/appdata/rsdw-dedicated:/serverdata/serverfiles:rw \
+-v /mnt/user/appdata/steamcmd:/serverdata/steamcmd:rw \
+-v /mnt/user/appdata/rsdw-dedicated:/serverdata/serverfiles:rw \
 ```
-
+```
 docker build -t rsdw-dedicated:local . && \
 docker run -d \
   --name=DragonWilds \
@@ -38,6 +38,7 @@ docker run -d \
   -v /mnt/cache/appdata/rsdw-dedicated:/serverdata/serverfiles:rw \
   -p 7777:7777/udp \
   rsdw-dedicated:local
+```
 
 ## Restart - To restart via command line
 docker stop DragonWilds && \
