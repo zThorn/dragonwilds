@@ -1,8 +1,13 @@
 ### Description
 This repo was built based on how ich777 builds his unraid steam apps. 
+
 Changes made to his files was to the start-server.sh, the file backs up before updating dragonwilds and restores after from the backup it due to a bug that would wipe the contents of your ini file.
+
 It also runs the game using the binary instead of using srcds_run.
+
 This is setup is as close to what I think ich777 would setup so hopefully it's easy to transfer to his app once he publishes.
+
+If there is an update you should just have to restart the server and the new dedicated server files should download.
 
 ### Setup
 1. Pull this repo down or copy the files somewhere on your server (I have them living in a folder in my shares folder on my array)
