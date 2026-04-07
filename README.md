@@ -1,7 +1,7 @@
 ### Description
 This repo was built based on how ich777 builds his unraid steam apps. https://github.com/ich777/docker-steamcmd-server
 
-Changes made to his files was to the start-server.sh, the file backs up before updating dragonwilds and restores after from the backup it due to a bug that would wipe the contents of your ini file.
+Changes made to his files was to the start-server.sh, the ini file backs up before updating dragonwilds and restores from the backup after due to a bug that would wipe the contents of your ini file if validate game files is on.
 
 It also runs the game using the binary instead of using srcds_run.
 
