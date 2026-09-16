@@ -1,11 +1,9 @@
-FROM ich777/debian-baseimage:bullseye_amd64
+FROM ich777/debian-baseimage:bookworm_amd64
 
 LABEL org.opencontainers.image.authors="admin@minenet.at"
 LABEL org.opencontainers.image.source="https://github.com/ich777/docker-steamcmd-server"
 
-RUN sed -i 's|deb.debian.org|archive.debian.org|g' /etc/apt/sources.list && \
-  sed -i '/security.debian.org/d' /etc/apt/sources.list && \
-  apt-get -o Acquire::Check-Valid-Until=false update && \
+RUN apt-get update && \
   apt-get -y install --no-install-recommends lib32gcc-s1 lib32stdc++6 lib32z1 && \
   rm -rf /var/lib/apt/lists/*
 
